@@ -18,6 +18,7 @@ exports[`Navbar should pass snapshot test 1`] = `
           aria-expanded="false"
           className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           id="mobile-dropdown-button"
+          onClick={[Function]}
           type="button"
         >
           <span
@@ -83,42 +84,33 @@ exports[`Navbar should pass snapshot test 1`] = `
             className="flex space-x-2"
           >
             <a
-              className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-              href="/index.html"
+              className=" text-white hover:bg-gray-900 hover:text-white round px-3 py-2"
+              href="/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               Home
             </a>
             <a
-              className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-              href="/properties.html"
+              className=" text-white hover:bg-gray-900 hover:text-white round px-3 py-2"
+              href="/properties"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               Properties
             </a>
             <a
-              className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-              href="/add-property.html"
+              className=" text-white hover:bg-gray-900 hover:text-white round px-3 py-2"
+              href="/properties/add"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              onTouchStart={[Function]}
             >
               Add Property
             </a>
           </div>
-        </div>
-      </div>
-      <div
-        className="hidden md:block md:ml-6"
-      >
-        <div
-          className="flex items-center"
-        >
-          <button
-            className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
-          >
-            <i
-              className="fa-brands fa-google text-white mr-2"
-            />
-            <span>
-              Login or Register
-            </span>
-          </button>
         </div>
       </div>
       <div
@@ -127,7 +119,10 @@ exports[`Navbar should pass snapshot test 1`] = `
         <a
           className="relative group"
           data-testid="notification"
-          href="messages.html"
+          href="/messages"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           <button
             className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -171,6 +166,7 @@ exports[`Navbar should pass snapshot test 1`] = `
               aria-haspopup="true"
               className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               id="user-menu-button"
+              onClick={[Function]}
               type="button"
             >
               <span
@@ -201,81 +197,8 @@ exports[`Navbar should pass snapshot test 1`] = `
               />
             </button>
           </div>
-          <div
-            aria-labelledby="user-menu-button"
-            aria-orientation="vertical"
-            className="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-            id="user-menu"
-            role="menu"
-            tabIndex="-1"
-          >
-            <a
-              className="block px-4 py-2 text-sm text-gray-700"
-              href="/profile.html"
-              id="user-menu-item-0"
-              role="menuitem"
-              tabIndex="-1"
-            >
-              Your Profile
-            </a>
-            <a
-              className="block px-4 py-2 text-sm text-gray-700"
-              href="saved-properties.html"
-              id="user-menu-item-2"
-              role="menuitem"
-              tabIndex="-1"
-            >
-              Saved Properties
-            </a>
-            <a
-              className="block px-4 py-2 text-sm text-gray-700"
-              href="#"
-              id="user-menu-item-2"
-              role="menuitem"
-              tabIndex="-1"
-            >
-              Sign Out
-            </a>
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="hidden"
-    id="mobile-menu"
-  >
-    <div
-      className="space-y-1 px-2 pb-3 pt-2"
-    >
-      <a
-        className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-        href="/index.html"
-      >
-        Home
-      </a>
-      <a
-        className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        href="/properties.html"
-      >
-        Properties
-      </a>
-      <a
-        className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-        href="/add-property.html"
-      >
-        Add Property
-      </a>
-      <button
-        className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4"
-      >
-        <i
-          className="fa-brands fa-google mr-2"
-        />
-        <span>
-          Login or Register
-        </span>
-      </button>
     </div>
   </div>
 </nav>
