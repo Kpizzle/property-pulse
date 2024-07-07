@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import '@/assets/styles/globals.css';
+import '../assets/styles/globals.css';
 
 export const metadata = {
   title: 'Property Pulse | Dream Property Finder',
