@@ -1,4 +1,4 @@
-import { model, Schema, model, models } from 'mongoose';
+import { model, Schema, models } from 'mongoose';
 
 const PropertySchema = new Schema(
   {
@@ -16,20 +16,20 @@ const PropertySchema = new Schema(
       required: true,
     },
     description: {
-      type: string,
+      type: String,
     },
     location: {
       street: {
-        type: string,
+        type: String,
       },
       city: {
-        type: string,
+        type: String,
       },
       state: {
-        type: string,
+        type: String,
       },
       zipcode: {
-        type: string,
+        type: String,
       },
     },
     beds: {
