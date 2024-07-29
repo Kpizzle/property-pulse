@@ -1,10 +1,10 @@
-import connectDb from 'config/database';
+import connectDB from 'config/database';
 import Property from 'models/Property';
 
 //GET /api/properties/:id
 export const GET = async (request, { params }) => {
   try {
-    await connectDb();
+    await connectDB();
 
     const property = await Property.findById(params.id);
 

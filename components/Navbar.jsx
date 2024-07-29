@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const Navbar = () => {
-  const { data: session } = useSession;
+  const { data: session } = useSession();
   const profileImage = session?.user?.image;
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,6 +28,7 @@ const Navbar = () => {
   }, []);
 
   console.log('session:', session);
+  console.log(profileImage);
 
   return (
     <nav className='bg-blue-700 border-b border-blue-500'>
