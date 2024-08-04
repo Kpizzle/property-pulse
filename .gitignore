@@ -40,3 +40,5 @@ next-env.d.ts
 #Theme files from tutorial
 _theme_files
 #properties.json
+
+cypress.env.json

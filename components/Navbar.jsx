@@ -27,9 +27,6 @@ const Navbar = () => {
     setAuthProviders();
   }, []);
 
-  console.log('session:', session);
-  console.log(profileImage);
-
   return (
     <nav className='bg-blue-700 border-b border-blue-500'>
       <div className='mx-auto max-w-7xl px-2 sm:px-6 lg:px-8'>
@@ -128,7 +125,7 @@ const Navbar = () => {
                     aria-haspopup='true'>
                     <span className='absolute -inset-1.5'></span>
                     <span className='sr-only'>Open user menu</span>
-                    <Image className='h-8 w-8 rounded-full' src={profileDefault} alt='' />
+                    <Image className='h-8 w-8 rounded-full' src={profileImage || profileDefault} alt='' width={40} height={40} />
                   </button>
                 </div>
 
@@ -141,13 +138,37 @@ const Navbar = () => {
                     aria-orientation='vertical'
                     aria-labelledby='user-menu-button'
                     tabIndex='-1'>
-                    <Link href='/profile' className='block px-4 py-2 text-sm text-gray-700' role='menuitem' tabIndex='-1' id='user-menu-item-0'>
+                    <Link
+                      href='/profile'
+                      onClick={() => {
+                        setIsProfileMenuOpen(false);
+                      }}
+                      className='block px-4 py-2 text-sm text-gray-700'
+                      role='menuitem'
+                      tabIndex='-1'
+                      id='user-menu-item-0'>
                       Your Profile
                     </Link>
-                    <Link href='/properties/saved' className='block px-4 py-2 text-sm text-gray-700' role='menuitem' tabIndex='-1' id='user-menu-item-2'>
+                    <Link
+                      href='/properties/saved'
+                      onClick={() => {
+                        setIsProfileMenuOpen(false);
+                      }}
+                      className='block px-4 py-2 text-sm text-gray-700'
+                      role='menuitem'
+                      tabIndex='-1'
+                      id='user-menu-item-2'>
                       Saved Properties
                     </Link>
-                    <button className='block px-4 py-2 text-sm text-gray-700' role='menuitem' tabIndex='-1' id='user-menu-item-2'>
+                    <button
+                      onClick={() => {
+                        setIsProfileMenuOpen(false);
+                        signOut();
+                      }}
+                      className='block px-4 py-2 text-sm text-gray-700'
+                      role='menuitem'
+                      tabIndex='-1'
+                      id='user-menu-item-2'>
                       Sign Out
                     </button>
                   </div>
